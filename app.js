@@ -3,7 +3,7 @@
 
 //global vars for dom elements
 const draggableListEl = document.querySelector("#draggable-list");
-const checkBtn = document.querySelector("check-btn");
+const checkBtn = document.querySelector("#check-btn");
 
 const richPeeps = [
   "Jeff Bezos",
@@ -32,7 +32,7 @@ function createList() {
     .sort((a, b) => a.sort - b.sort)
     .map((a) => a.value)
     .forEach((person, index) => {
-      console.log(person);
+      //   console.log(person);
 
       const listItem = document.createElement("li");
 
@@ -56,7 +56,7 @@ function createList() {
 
 function dragStart() {
   //   console.log("event: ", "dragstart");
-  dragStartIndex = +this.closest("li").getAtrribute("data-index");
+  dragStartIndex = +this.closest("li").getAttribute("data-index");
 }
 function dragEnter() {
   //   console.log("event: ", "dragenter");
@@ -78,16 +78,31 @@ function dragDrop() {
   this.classList.remove("over");
 }
 
+//swap list items from drag/drop
 function swapItems(fromIndex, toIndex) {
-    // console.log("123");
-    const itemOne = listItems[fromIndex].querySelector(".draggable");
-    const itemTwo = listItems[toIndex].querySelector(".draggable");
+  // console.log("123");
+  const itemOne = listItems[fromIndex].querySelector(".draggable");
+  const itemTwo = listItems[toIndex].querySelector(".draggable");
 
-    console.log("Item one", itemOne);
-    console.log("Item two", itemTwo);
+  // console.log("Item one", itemOne);
+  // console.log("Item two", itemTwo);
 
-    listItems[fromIndex].appendChild(itemTwo);
-    listItems[toIndex].appendChild(itemOne);
+  listItems[fromIndex].appendChild(itemTwo);
+  listItems[toIndex].appendChild(itemOne);
+}
+
+//check the order of the list
+function checkOrder() {
+  listItems.forEach((listItem, index) => {
+    const personName = listItem.querySelector(".draggable").innerText.trim();
+
+    if (personName !== richPeeps[index]) {
+      listItem.classList.add("wrong");
+    } else {
+      listItem.classList.remove("wrong");
+      listItem.classList.add("right");
+    }
+  });
 }
 
 function addEventListeners() {
@@ -95,7 +110,7 @@ function addEventListeners() {
   const dragListItemsEl = document.querySelectorAll(".draggable-list li");
 
   draggableEl.forEach((draggable) => {
-    draggable.addEventListener("dragstrat", dragStart);
+    draggable.addEventListener("dragstart", dragStart);
   });
 
   dragListItemsEl.forEach((item) => {
@@ -105,3 +120,5 @@ function addEventListeners() {
     item.addEventListener("dragleave", dragLeave);
   });
 }
+
+checkBtn.addEventListener("click", checkOrder);
