@@ -27,14 +27,18 @@ createList();
 
 //insert list items into HTML and display on DOM
 function createList() {
+  [...richPeeps]
+    .map((a) => ({ value: a, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map((a) => a.value)
+    .forEach((person, index) => {
+      console.log(person);
 
-  [...richPeeps].forEach((person, index) => {
+      const listItem = document.createElement("li");
 
-    const listItem = document.createElement("li");
+      listItem.setAttribute("data-index", index);
 
-    listItem.setAttribute("data-index", index);
-
-    listItem.innerHTML = `
+      listItem.innerHTML = `
     <span class="number">${index + 1}</span>
     <div class="draggable" draggable="true">
         <p class="person-name">${person}</p>
@@ -42,8 +46,8 @@ function createList() {
     </div>
     `;
 
-    listItems.push(listItem);
+      listItems.push(listItem);
 
-    draggableListEl.appendChild(listItem);
-  });
+      draggableListEl.appendChild(listItem);
+    });
 }
