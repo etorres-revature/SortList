@@ -22,10 +22,11 @@ body {
 }
 
 .draggable-list {
-  border: 1px solid var(--borer-color);
+  border: 1.8px solid var(--border-color);
   color: var(--text-color);
   padding: 0;
   list-style-type: none;
+  margin-bottom: 18px;
 }
 
 .draggable-list li {
@@ -80,6 +81,7 @@ body {
     font-size: 16px;
     padding: 10px 20px;
     cursor: pointer;
+    border: 1px double red;
 }
 
 .check-btn:active {
