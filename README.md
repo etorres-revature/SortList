@@ -1,6 +1,6 @@
 # [SortList](https://etorres-revature.github.io/SortList/)
 
-[SortList](https://etorres-revature.github.io/SortList/) is an app that takes an array and displays it randomly on the page.  
+[SortList](https://etorres-revature.github.io/SortList/) is an app that takes an array and displays it randomly on the page. (It currently contains the world's ten richest people, but can be updated for other sort operations.) 
 
 ![SORTLIST start](./assets/images/screenshots/sortlist-start.png)
 
@@ -16,7 +16,7 @@ The "Check Order" button can be used to see if the items are sorted correctly.
 
 Please enjoy the [Audio Player](https://etorres-revature.github.io/Audio_Player/).  E-mail me with any feature update suggestions.
 
-![SORTLIST check order](./assets/images/screenshohts/sortlist-check-order.png)
+![SORTLIST check order](./assets/images/screenshots/sortlist-check-order.png)
 
 Please enjoy the [SortList](https://etorres-revature.github.io/SortList/).  E-mail me with any feature update suggestions.
 
