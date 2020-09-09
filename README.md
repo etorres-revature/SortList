@@ -1,8 +1,24 @@
 # [SortList](https://etorres-revature.github.io/SortList/)
 
- https://etorres-revature.github.io/SortList/
+[SortList](https://etorres-revature.github.io/SortList/) is an app that takes an array and displays it randomly on the page.  
 
- Please enjoy the [Audio Player](https://etorres-revature.github.io/Audio_Player/).  E-mail me with any feature update suggestions.
+![SORTLIST start](./assets/images/screenshots/sortlist-start.png)
+
+Items can be dragged and placed in new positions to try and put them in the correct order.
+
+![SORTLIST drag](./assets/images/screenshots/sortlist-drag.png)
+
+The "Check Order" button can be used to see if the items are sorted correctly. 
+
+* **Correct Answers** appear in green ![#3ae374](https://placehold.it/18/3ae374?text=+)
+
+* **Wrong Answers** appear in red ![#ff3838](https://placehold.it/18/ff3838?text=+)
+
+Please enjoy the [Audio Player](https://etorres-revature.github.io/Audio_Player/).  E-mail me with any feature update suggestions.
+
+![SORTLIST check order](./assets/images/screenshohts/sortlist-check-order.png)
+
+Please enjoy the [SortList](https://etorres-revature.github.io/SortList/).  E-mail me with any feature update suggestions.
 
 ### :computer: Technologies Used :computer:
 
